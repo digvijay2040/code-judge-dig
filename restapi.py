@@ -35,7 +35,7 @@ def post_question():
 
 
 @app.route("/api/quiz-questions/<quiz_id>", methods=["GET"])
-def get_question(quiz_id):
+def get_question_quiz(quiz_id):
     quiz = Quiz.query.get(quiz_id)
     if not quiz:
         return "", 404
